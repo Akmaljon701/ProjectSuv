@@ -25,7 +25,7 @@ def all_users(search, page, limit, status, db,branch_id):
     return pagination(users, page, limit)
 
 
-def create_user_r(form, db, thisuser):
+def create_user_r(form, db):
     if db.query(Users).filter(Users.username == form.username).first():
         raise HTTPException(status_code=400, detail="Username error")
     if form.role != "admin" and form.role != "operator" and form.role != "warehouser"and form.role != "driver":
@@ -42,14 +42,14 @@ def create_user_r(form, db, thisuser):
         balance_oylik=form.balance_oylik
     )
     save_in_db(db, new_user_db)
-    for i in form.phones:
-        comment = i.comment
-        if db.query(Phones).filter(Phones.number == i.number).first():
-                    raise HTTPException(status_code=400, detail="Bu malumotlar allaqachon bazada bor")
-        else:
-            name = i.name
-            number = i.number
-            create_phone(name,comment, number, new_user_db.id, thisuser.id, db, 'user',thisuser.branch_id)
+    # for i in form.phones:
+    #     comment = i.comment
+    #     if db.query(Phones).filter(Phones.number == i.number).first():
+    #                 raise HTTPException(status_code=400, detail="Bu malumotlar allaqachon bazada bor")
+    #     else:
+    #         name = i.name
+    #         number = i.number
+    #         create_phone(name,comment, number, new_user_db.id, thisuser.id, db, 'user',thisuser.branch_id)
 
 
 
