@@ -37,6 +37,11 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\BackEnd\crud\suv\suv" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="suv" />
@@ -75,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701167830556</updated>
       <workItem from="1701167831989" duration="2135000" />
-      <workItem from="1701169986629" duration="3482000" />
+      <workItem from="1701169986629" duration="4156000" />
     </task>
     <servers />
   </component>
